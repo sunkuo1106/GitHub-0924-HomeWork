@@ -1,6 +1,10 @@
 package com.kgc.service.impl;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import com.kgc.mapper.BookMapper;
 import com.kgc.mapper.UserMapper;
+import com.kgc.pojo.Book;
 import com.kgc.pojo.User;
 import com.kgc.pojo.UserExample;
 import com.kgc.service.UserLoginService;
@@ -17,15 +21,19 @@ import java.util.List;
 public class UserLoginServiceImpl implements UserLoginService {
     @Resource
     UserMapper userMapper;
+
+
     @Override
     public User users(String name) {
-        UserExample userExample=new UserExample();
+        UserExample userExample = new UserExample();
         UserExample.Criteria criteria = userExample.createCriteria();
         criteria.andNameEqualTo(name);
         List<User> users = userMapper.selectByExample(userExample);
-        if(users.size()>0){
+        if (users.size() > 0) {
             return users.get(0);
         }
         return null;
     }
+
+
 }
