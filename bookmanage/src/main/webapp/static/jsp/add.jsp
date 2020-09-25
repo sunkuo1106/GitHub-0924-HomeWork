@@ -55,6 +55,7 @@
             </td>
         </tr>
     </table>
+        <p>${msg}</p>
     </form>
 </center>
 <script type="text/javascript">
