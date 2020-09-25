@@ -30,6 +30,6 @@ public class LoginController {
             model.addAttribute("flag",true);
             session.setAttribute("users",users);
         }
-        return "main";
+        return "redirect:GetAllServlet";
     }
 }

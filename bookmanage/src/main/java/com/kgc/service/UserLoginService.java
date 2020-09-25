@@ -1,6 +1,7 @@
 package com.kgc.service;
 
-import com.kgc.pojo.User;
+import com.github.pagehelper.PageInfo;
+import com.kgc.pojo.*;
 
 /**
  * @author shkstart
@@ -8,4 +9,6 @@ import com.kgc.pojo.User;
  */
 public interface UserLoginService {
     User users(String name);
+
+
 }
