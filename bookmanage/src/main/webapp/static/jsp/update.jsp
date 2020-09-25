@@ -15,7 +15,7 @@
 </head>
 <body>
 <center>
-    <form action="/updBook" method="post">
+    <form action="/updBook?id=${user.id}" method="post">
     <table border="1" style="width: 600px;height: 300px;">
         <tr align="center">
             <td colspan="2" style="height:80px;font-size: 30px;font-weight: bolder;background-color: #FFFECB">编辑图书</td>
